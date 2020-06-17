@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunTicks", "RunTicks\RunTicks.csproj", "{64C557A8-75D1-436E-91E4-1D484AF2F757}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunTicks.UnitTests", "RunTicks.UnitTests\RunTicks.UnitTests.csproj", "{BC590ACC-E737-4F58-95FC-EAB99324E5D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{12A2043D-9D6B-4C1B-9109-5C005BDD424E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64C557A8-75D1-436E-91E4-1D484AF2F757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C557A8-75D1-436E-91E4-1D484AF2F757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C557A8-75D1-436E-91E4-1D484AF2F757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C557A8-75D1-436E-91E4-1D484AF2F757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC590ACC-E737-4F58-95FC-EAB99324E5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC590ACC-E737-4F58-95FC-EAB99324E5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC590ACC-E737-4F58-95FC-EAB99324E5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC590ACC-E737-4F58-95FC-EAB99324E5D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC590ACC-E737-4F58-95FC-EAB99324E5D8} = {12A2043D-9D6B-4C1B-9109-5C005BDD424E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DFD95A8-13DA-4B34-96C9-48CE73D7DA04}
+	EndGlobalSection
+EndGlobal
