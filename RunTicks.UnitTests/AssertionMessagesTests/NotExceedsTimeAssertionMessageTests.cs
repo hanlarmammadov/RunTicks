@@ -8,7 +8,7 @@ using System.Text;
 namespace RunTicks.UnitTests
 {
     [TestFixture]
-    public class NotExceedsTimeAssertionMessageTests
+    public class NotExceedTimeAssertionMessageTests
     {
         [Test]
         public void Ctor_When_Called_Sets_Provided_Info_Correctly()
@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedsTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedsTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, descr);
+            NotExceedTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, descr);
 
             // Assert
             Assert.AreEqual(expectedTimeSpan, notExceedsTimeAssertionMessage.ExpectedMaxTimespan);
@@ -34,7 +34,7 @@ namespace RunTicks.UnitTests
             TimeSpan expectedTimeSpan = new TimeSpan(5567);
             TimeSpan actualTimeSpan = new TimeSpan(674567);
             string descr = "some description";
-            NotExceedsTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedsTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, descr);
+            NotExceedTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act
@@ -52,7 +52,7 @@ namespace RunTicks.UnitTests
         //    // Arrange
         //    TimeSpan expectedTimeSpan = new TimeSpan(5567);
         //    TimeSpan actualTimeSpan = new TimeSpan(674567);
-        //    NotExceedsTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedsTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, null);
+        //    NotExceedTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, null);
         //    StringBuilder sb = new StringBuilder();
         //    var cultureInfoMock = new Mock<CultureInfo>("es-ES");
 

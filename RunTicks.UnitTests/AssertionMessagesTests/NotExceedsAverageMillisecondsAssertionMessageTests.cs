@@ -8,7 +8,7 @@ using System.Text;
 namespace RunTicks.UnitTests
 {
     [TestFixture]
-    public class NotExceedsAverageMillisecondsAssertionMessageTests
+    public class NotExceedAverageMillisecondsAssertionMessageTests
     {
         [Test]
         public void Ctor_When_Called_Sets_Provided_Info_Correctly()
@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedsAverageMillisecondsAssertionMessage notExceedsAverageMillisecondsAssertionMessage = new NotExceedsAverageMillisecondsAssertionMessage(expectedMaxAverageMilliseconds, actualAverageMilliseconds, descr);
+            NotExceedAverageMillisecondsAssertionMessage notExceedsAverageMillisecondsAssertionMessage = new NotExceedAverageMillisecondsAssertionMessage(expectedMaxAverageMilliseconds, actualAverageMilliseconds, descr);
 
             // Assert
             Assert.AreEqual(expectedMaxAverageMilliseconds, notExceedsAverageMillisecondsAssertionMessage.ExpectedMaxAverageMilliseconds);
@@ -33,7 +33,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxAverageMilliseconds = 342;
             Double actualAverageMilliseconds = 22112;
             string descr = "some description"; 
-            NotExceedsAverageMillisecondsAssertionMessage notExceedsAverageMillisecondsAssertionMessage = new NotExceedsAverageMillisecondsAssertionMessage(expectedMaxAverageMilliseconds, actualAverageMilliseconds, descr);
+            NotExceedAverageMillisecondsAssertionMessage notExceedsAverageMillisecondsAssertionMessage = new NotExceedAverageMillisecondsAssertionMessage(expectedMaxAverageMilliseconds, actualAverageMilliseconds, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act
@@ -51,7 +51,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxAverageMilliseconds = 342;
             Double actualAverageMilliseconds = 22112;
             string descr = "some description";
-            NotExceedsAverageMillisecondsAssertionMessage notExceedsAverageMillisecondsAssertionMessage = new NotExceedsAverageMillisecondsAssertionMessage(expectedMaxAverageMilliseconds, actualAverageMilliseconds, descr);
+            NotExceedAverageMillisecondsAssertionMessage notExceedsAverageMillisecondsAssertionMessage = new NotExceedAverageMillisecondsAssertionMessage(expectedMaxAverageMilliseconds, actualAverageMilliseconds, descr);
             StringBuilder sb = new StringBuilder();
             var cultureInfoMock = new Mock<CultureInfo>("es-ES");
 

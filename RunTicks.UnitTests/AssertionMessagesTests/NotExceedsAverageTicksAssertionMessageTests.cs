@@ -8,7 +8,7 @@ using System.Text;
 namespace RunTicks.UnitTests
 {
     [TestFixture]
-    public class NotExceedsAverageTicksAssertionMessageTests
+    public class NotExceedAverageTicksAssertionMessageTests
     {
         [Test]
         public void Ctor_When_Called_Sets_Provided_Info_Correctly()
@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedsAverageTicksAssertionMessage notExceedsAverageTicksAssertionMessage = new NotExceedsAverageTicksAssertionMessage(expectedMaxAverageTicks, actualAverageTicks, descr);
+            NotExceedAverageTicksAssertionMessage notExceedsAverageTicksAssertionMessage = new NotExceedAverageTicksAssertionMessage(expectedMaxAverageTicks, actualAverageTicks, descr);
 
             // Assert
             Assert.AreEqual(expectedMaxAverageTicks, notExceedsAverageTicksAssertionMessage.ExpectedMaxAverageTicks);
@@ -34,7 +34,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxAverageTicks = 5567;
             Int64 actualAverageTicks = 674567;
             string descr = "some description"; 
-            NotExceedsAverageTicksAssertionMessage notExceedsAverageTicksAssertionMessage = new NotExceedsAverageTicksAssertionMessage(expectedMaxAverageTicks, actualAverageTicks, descr);
+            NotExceedAverageTicksAssertionMessage notExceedsAverageTicksAssertionMessage = new NotExceedAverageTicksAssertionMessage(expectedMaxAverageTicks, actualAverageTicks, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act

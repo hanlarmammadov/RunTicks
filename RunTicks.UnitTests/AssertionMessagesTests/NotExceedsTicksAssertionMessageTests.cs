@@ -8,7 +8,7 @@ using System.Text;
 namespace RunTicks.UnitTests
 {
     [TestFixture]
-    public class NotExceedsTicksAssertionMessageTests
+    public class NotExceedTicksAssertionMessageTests
     {
         [Test]
         public void Ctor_When_Called_Sets_Provided_Info_Correctly()
@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedsTicksAssertionMessage notExceedsTicksAssertionMessage = new NotExceedsTicksAssertionMessage(expectedMaxTicks, actualTicks, descr);
+            NotExceedTicksAssertionMessage notExceedsTicksAssertionMessage = new NotExceedTicksAssertionMessage(expectedMaxTicks, actualTicks, descr);
 
             // Assert
             Assert.AreEqual(expectedMaxTicks, notExceedsTicksAssertionMessage.ExpectedMaxTicks);
@@ -34,7 +34,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxTicks = 5567;
             Int64 actualTicks = 674567;
             string descr = "some description";
-            NotExceedsTicksAssertionMessage notExceedsTicksAssertionMessage = new NotExceedsTicksAssertionMessage(expectedMaxTicks, actualTicks, descr);
+            NotExceedTicksAssertionMessage notExceedsTicksAssertionMessage = new NotExceedTicksAssertionMessage(expectedMaxTicks, actualTicks, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act

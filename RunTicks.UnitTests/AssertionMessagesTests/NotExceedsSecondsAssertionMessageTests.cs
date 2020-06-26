@@ -8,7 +8,7 @@ using System.Text;
 namespace RunTicks.UnitTests
 {
     [TestFixture]
-    public class NotExceedsSecondsAssertionMessageTests
+    public class NotExceedSecondsAssertionMessageTests
     {
         [Test]
         public void Ctor_When_Called_Sets_Provided_Info_Correctly()
@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedsSecondsAssertionMessage notExceedsSecondsAssertionMessage = new NotExceedsSecondsAssertionMessage(expectedSeconds, actualSeconds, descr);
+            NotExceedSecondsAssertionMessage notExceedsSecondsAssertionMessage = new NotExceedSecondsAssertionMessage(expectedSeconds, actualSeconds, descr);
 
             // Assert
             Assert.AreEqual(expectedSeconds, notExceedsSecondsAssertionMessage.ExpectedMaxSeconds);
@@ -33,7 +33,7 @@ namespace RunTicks.UnitTests
             Int64 expectedSeconds = 2;
             Double actualSeconds = 5;
             string descr = "some description";
-            NotExceedsSecondsAssertionMessage notExceedsSecondsAssertionMessage = new NotExceedsSecondsAssertionMessage(expectedSeconds, actualSeconds, descr);
+            NotExceedSecondsAssertionMessage notExceedsSecondsAssertionMessage = new NotExceedSecondsAssertionMessage(expectedSeconds, actualSeconds, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act
@@ -51,7 +51,7 @@ namespace RunTicks.UnitTests
             Int64 expectedSeconds = 2;
             Double actualSeconds = 5;
             string descr = "some description";
-            NotExceedsSecondsAssertionMessage notExceedsSecondsAssertionMessage = new NotExceedsSecondsAssertionMessage(expectedSeconds, actualSeconds, descr);
+            NotExceedSecondsAssertionMessage notExceedsSecondsAssertionMessage = new NotExceedSecondsAssertionMessage(expectedSeconds, actualSeconds, descr);
             StringBuilder sb = new StringBuilder();
             var cultureInfoMock = new Mock<CultureInfo>("es-ES");
 

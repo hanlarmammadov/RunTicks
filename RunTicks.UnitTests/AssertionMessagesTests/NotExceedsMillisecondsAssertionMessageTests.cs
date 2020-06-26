@@ -8,7 +8,7 @@ using System.Text;
 namespace RunTicks.UnitTests
 {
     [TestFixture]
-    public class NotExceedsMillisecondsAssertionMessageTests
+    public class NotExceedMillisecondsAssertionMessageTests
     {
         [Test]
         public void Ctor_When_Called_Sets_Provided_Info_Correctly()
@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedsMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedsMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
+            NotExceedMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
 
             // Assert
             Assert.AreEqual(expectedMaxMilliseconds, notExceedsMillisecondsAssertionMessage.ExpectedMaxMilliseconds);
@@ -33,7 +33,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxMilliseconds = 342;
             Double actualMilliseconds = 22112;
             string descr = "some description";
-            NotExceedsMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedsMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
+            NotExceedMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act
@@ -51,7 +51,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxMilliseconds = 342;
             Double actualMilliseconds = 22112;
             string descr = "some description";
-            NotExceedsMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedsMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
+            NotExceedMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
             StringBuilder sb = new StringBuilder();
             var cultureInfoMock = new Mock<CultureInfo>("es-ES");
 

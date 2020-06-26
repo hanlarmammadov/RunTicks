@@ -4,12 +4,12 @@ using System.Text;
 
 namespace RunTicks.AssertionMessages
 {
-    public class NotExceedsTimeAssertionMessage : AssertionMessageBase
+    public class NotExceedTimeAssertionMessage : AssertionMessageBase
     {
         private readonly TimeSpan _expectedMaxTimespan;
         private readonly TimeSpan _actualTimespan;
 
-        public NotExceedsTimeAssertionMessage(TimeSpan expectedMaxTimespan, TimeSpan actualTimespan, string description)
+        public NotExceedTimeAssertionMessage(TimeSpan expectedMaxTimespan, TimeSpan actualTimespan, string description)
             :base(description)
         {
             _expectedMaxTimespan = expectedMaxTimespan;
