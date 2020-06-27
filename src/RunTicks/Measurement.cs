@@ -29,7 +29,7 @@ namespace RunTicks
         internal Action PostAction => _postAction;
 
         /// <summary>
-        /// Starting point for building a measurement using builder methods.
+        /// Starting point for creating a measurement using builder methods.
         /// </summary>
         /// <param name="name">Measurement name.</param>
         /// <returns>Created measurement.</returns>
@@ -38,7 +38,7 @@ namespace RunTicks
             return new Measurement(name);
         }
         /// <summary>
-        /// Starting point for building a measurement using builder methods.
+        /// Starting point for creating a measurement using builder methods.
         /// </summary>
         /// <returns>Created measurement.</returns>
         public static Measurement Create()
@@ -46,7 +46,7 @@ namespace RunTicks
             return new Measurement(null);
         }
         /// <summary>
-        /// Adds a parameterless action that is being measured.
+        /// Adds a parameterless action to be measured.
         /// </summary>
         /// <param name="action"></param>
         /// <returns>Self.</returns>
@@ -57,7 +57,7 @@ namespace RunTicks
             return this;
         }
         /// <summary>
-        /// Adds a measured action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
+        /// Adds an action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
         /// </summary>
         /// <param name="action"></param>
         /// <returns>Self.</returns>
@@ -68,7 +68,7 @@ namespace RunTicks
             return this;
         }
         /// <summary>
-        /// Adds a measured async parameterless action that is being measured.
+        /// Adds an async parameterless action to be measured.
         /// </summary>
         /// <param name="action"></param>
         /// <returns>Self.</returns>
@@ -79,7 +79,7 @@ namespace RunTicks
             return this;
         }
         /// <summary>
-        /// Adds a measured async action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
+        /// Adds an async action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
         /// </summary>
         /// <param name="action"></param>
         /// <returns>Self.</returns>
@@ -90,7 +90,7 @@ namespace RunTicks
             return this;
         }
         /// <summary>
-        /// Specifies a pre-action that is executed before every iteration of execution of the measured action.
+        /// Specifies a pre-action that is executed before every execution iteration of the measured action.
         /// The execution time of pre-action is never considered.
         /// </summary>
         /// <param name="preAction"></param>
@@ -101,7 +101,7 @@ namespace RunTicks
             return this;
         }
         /// <summary>
-        /// Specifies a post-action that is executed after every iteration of execution of the measured action.
+        /// Specifies a post-action that is executed after every execution iteration of the measured action.
         /// The execution time of post-action is never considered.
         /// </summary>
         /// <param name="postAction"></param>

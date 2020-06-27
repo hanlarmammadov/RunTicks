@@ -1,8 +1,10 @@
 ﻿using System;
-using System.ComponentModel;
 
 namespace RunTicks
 {
+    /// <summary>
+    /// An exception that is thrown when the measurement assertion fails.
+    /// </summary>
     public class AssertionException : Exception
     {
         public AssertionException(string message)
