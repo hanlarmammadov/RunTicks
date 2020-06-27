@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedMinutesAssertionMessage notExceedsMinutesAssertionMessage = new NotExceedMinutesAssertionMessage(expectedMinutes, actualMinutes, descr);
+            NotExceedTotalMinutesAssertionMessage notExceedsMinutesAssertionMessage = new NotExceedTotalMinutesAssertionMessage(expectedMinutes, actualMinutes, descr);
 
             // Assert
             Assert.AreEqual(expectedMinutes, notExceedsMinutesAssertionMessage.ExpectedMaxMinutes);
@@ -33,7 +33,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMinutes = 1;
             Double actualMinutes = 2;
             string descr = "some description";
-            NotExceedMinutesAssertionMessage notExceedsMinutesAssertionMessage = new NotExceedMinutesAssertionMessage(expectedMinutes, actualMinutes, descr);
+            NotExceedTotalMinutesAssertionMessage notExceedsMinutesAssertionMessage = new NotExceedTotalMinutesAssertionMessage(expectedMinutes, actualMinutes, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act
@@ -51,7 +51,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMinutes = 1;
             Double actualMinutes = 2;
             string descr = "some description";
-            NotExceedMinutesAssertionMessage notExceedsMinutesAssertionMessage = new NotExceedMinutesAssertionMessage(expectedMinutes, actualMinutes, descr);
+            NotExceedTotalMinutesAssertionMessage notExceedsMinutesAssertionMessage = new NotExceedTotalMinutesAssertionMessage(expectedMinutes, actualMinutes, descr);
             StringBuilder sb = new StringBuilder();
             var cultureInfoMock = new Mock<CultureInfo>("es-ES");
 

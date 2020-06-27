@@ -18,30 +18,30 @@ namespace RunTicks
         internal CultureInfo CurrentCulture => CultureInfo.CurrentCulture ?? CultureInfo.InvariantCulture;
 
         // Assertions on totals.
-        public void NotExceedTicks(Int64 ticks, string description = null)
+        public void NotExceedTotalTicks(Int64 ticks, string description = null)
         {
-            if (_result.ElapsedTicks > ticks)
-                throw new AssertionException(new NotExceedTicksAssertionMessage(ticks, _result.ElapsedTicks, description).Generate(CurrentCulture));
+            if (_result.TotalElapsedTicks > ticks)
+                throw new AssertionException(new NotExceedTotalTicksAssertionMessage(ticks, _result.TotalElapsedTicks, description).Generate(CurrentCulture));
         }
-        public void NotExceedMilliseconds(Int64 milliseconds, string description = null)
+        public void NotExceedTotalMilliseconds(Int64 milliseconds, string description = null)
         {
-            if (_result.Milliseconds > milliseconds)
-                throw new AssertionException(new NotExceedMillisecondsAssertionMessage(milliseconds, _result.Milliseconds, description).Generate(CurrentCulture));
+            if (_result.TotalMilliseconds > milliseconds)
+                throw new AssertionException(new NotExceedTotalMillisecondsAssertionMessage(milliseconds, _result.TotalMilliseconds, description).Generate(CurrentCulture));
         }
-        public void NotExceedSeconds(Int32 seconds, string description = null)
+        public void NotExceedTotalSeconds(Int32 seconds, string description = null)
         {
-            if (_result.Seconds > seconds)
-                throw new AssertionException(new NotExceedSecondsAssertionMessage(seconds, _result.Seconds, description).Generate(CurrentCulture));
+            if (_result.TotalSeconds > seconds)
+                throw new AssertionException(new NotExceedTotalSecondsAssertionMessage(seconds, _result.TotalSeconds, description).Generate(CurrentCulture));
         }
-        public void NotExceedMinutes(Int32 minutes, string description = null)
+        public void NotExceedTotalMinutes(Int32 minutes, string description = null)
         {
-            if (_result.Minutes > minutes)
-                throw new AssertionException(new NotExceedMinutesAssertionMessage(minutes, _result.Minutes, description).Generate(CurrentCulture));
+            if (_result.TotalMinutes > minutes)
+                throw new AssertionException(new NotExceedTotalMinutesAssertionMessage(minutes, _result.TotalMinutes, description).Generate(CurrentCulture));
         }
-        public void NotExceedTime(TimeSpan time, string description = null)
+        public void NotExceedTotalTime(TimeSpan time, string description = null)
         {
             if (_result.ElapsedTime > time)
-                throw new AssertionException(new NotExceedTimeAssertionMessage(time, _result.ElapsedTime, description).Generate(CurrentCulture));
+                throw new AssertionException(new NotExceedTotalTimeAssertionMessage(time, _result.ElapsedTime, description).Generate(CurrentCulture));
         }
         // Assertions on averages.
         public void NotExceedAverageTicks(Int64 ticks, string description = null)

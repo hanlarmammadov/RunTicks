@@ -4,12 +4,12 @@ using System.Text;
 
 namespace RunTicks.AssertionMessages
 {
-    public class NotExceedMinutesAssertionMessage : AssertionMessageBase
+    public class NotExceedTotalMinutesAssertionMessage : AssertionMessageBase
     {
         private readonly Int64 _expectedMaxMinutes;
         private readonly Double _actualMinutes;
 
-        public NotExceedMinutesAssertionMessage(Int64 expectedMaxMinutes, Double actualMinutes, string description)
+        public NotExceedTotalMinutesAssertionMessage(Int64 expectedMaxMinutes, Double actualMinutes, string description)
             :base(description)
         {
             _expectedMaxMinutes = expectedMaxMinutes;

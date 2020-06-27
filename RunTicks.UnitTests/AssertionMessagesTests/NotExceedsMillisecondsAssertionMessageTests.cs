@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
+            NotExceedTotalMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedTotalMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
 
             // Assert
             Assert.AreEqual(expectedMaxMilliseconds, notExceedsMillisecondsAssertionMessage.ExpectedMaxMilliseconds);
@@ -33,7 +33,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxMilliseconds = 342;
             Double actualMilliseconds = 22112;
             string descr = "some description";
-            NotExceedMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
+            NotExceedTotalMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedTotalMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act
@@ -51,7 +51,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxMilliseconds = 342;
             Double actualMilliseconds = 22112;
             string descr = "some description";
-            NotExceedMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
+            NotExceedTotalMillisecondsAssertionMessage notExceedsMillisecondsAssertionMessage = new NotExceedTotalMillisecondsAssertionMessage(expectedMaxMilliseconds, actualMilliseconds, descr);
             StringBuilder sb = new StringBuilder();
             var cultureInfoMock = new Mock<CultureInfo>("es-ES");
 

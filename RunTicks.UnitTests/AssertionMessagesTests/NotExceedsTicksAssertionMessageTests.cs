@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedTicksAssertionMessage notExceedsTicksAssertionMessage = new NotExceedTicksAssertionMessage(expectedMaxTicks, actualTicks, descr);
+            NotExceedTotalTicksAssertionMessage notExceedsTicksAssertionMessage = new NotExceedTotalTicksAssertionMessage(expectedMaxTicks, actualTicks, descr);
 
             // Assert
             Assert.AreEqual(expectedMaxTicks, notExceedsTicksAssertionMessage.ExpectedMaxTicks);
@@ -34,7 +34,7 @@ namespace RunTicks.UnitTests
             Int64 expectedMaxTicks = 5567;
             Int64 actualTicks = 674567;
             string descr = "some description";
-            NotExceedTicksAssertionMessage notExceedsTicksAssertionMessage = new NotExceedTicksAssertionMessage(expectedMaxTicks, actualTicks, descr);
+            NotExceedTotalTicksAssertionMessage notExceedsTicksAssertionMessage = new NotExceedTotalTicksAssertionMessage(expectedMaxTicks, actualTicks, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act

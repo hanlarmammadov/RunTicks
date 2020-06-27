@@ -24,7 +24,7 @@ namespace RunTicks.UnitTests
             RunResult runResult = new RunResult(elapsedTicks, numberOfRuns, startDate, endDate, measurementName, attemptName, additionalData);
 
             // Assert
-            Assert.AreEqual(elapsedTicks, runResult.ElapsedTicks);
+            Assert.AreEqual(elapsedTicks, runResult.TotalElapsedTicks);
             Assert.AreEqual((Double)(elapsedTicks / numberOfRuns), runResult.AverageTicks);
         }
     }

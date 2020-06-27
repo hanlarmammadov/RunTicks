@@ -33,8 +33,8 @@ namespace RunTicks.UnitTests
             AssertPart assertPart = new AssertPart(measureResult);
 
             // Act
-            assertPart.NotExceedTicks(3);
-            assertPart.NotExceedTicks(2);
+            assertPart.NotExceedTotalTicks(3);
+            assertPart.NotExceedTotalTicks(2);
         }
         [Test]
         public void NotExceedTicks_When_Called_Given_That_Result_Ticks_Are_More_That_Provided_Max_Does_Not_Throw()
@@ -46,7 +46,7 @@ namespace RunTicks.UnitTests
             Assert.Catch<AssertionException>(() =>
             {
                 // Act
-                assertPart.NotExceedTicks(2, "some description");
+                assertPart.NotExceedTotalTicks(2, "some description");
             });
         }
 
@@ -59,8 +59,8 @@ namespace RunTicks.UnitTests
             AssertPart assertPart = new AssertPart(measureResult);
 
             // Act
-            assertPart.NotExceedMilliseconds(3000);
-            assertPart.NotExceedMilliseconds(2000);
+            assertPart.NotExceedTotalMilliseconds(3000);
+            assertPart.NotExceedTotalMilliseconds(2000);
         }
         [Test]
         public void NotExceedMilliseconds_When_Called_Given_That_Result_Milliseconds_Are_More_That_Provided_Max_Does_Not_Throw()
@@ -73,7 +73,7 @@ namespace RunTicks.UnitTests
             Assert.Catch<AssertionException>(() =>
             {
                 // Act
-                assertPart.NotExceedMilliseconds(1000, "some description");
+                assertPart.NotExceedTotalMilliseconds(1000, "some description");
             });
         }
 
@@ -86,8 +86,8 @@ namespace RunTicks.UnitTests
             AssertPart assertPart = new AssertPart(measureResult);
 
             // Act
-            assertPart.NotExceedSeconds(3);
-            assertPart.NotExceedSeconds(2);
+            assertPart.NotExceedTotalSeconds(3);
+            assertPart.NotExceedTotalSeconds(2);
         }
         [Test]
         public void NotExceedSeconds_When_Called_Given_That_Result_Seconds_Are_More_That_Provided_Max_Does_Not_Throw()
@@ -100,7 +100,7 @@ namespace RunTicks.UnitTests
             Assert.Catch<AssertionException>(() =>
             {
                 // Act
-                assertPart.NotExceedSeconds(1, "some description");
+                assertPart.NotExceedTotalSeconds(1, "some description");
             });
         }
 
@@ -113,8 +113,8 @@ namespace RunTicks.UnitTests
             AssertPart assertPart = new AssertPart(measureResult);
 
             // Act
-            assertPart.NotExceedMinutes(3);
-            assertPart.NotExceedMinutes(2);
+            assertPart.NotExceedTotalMinutes(3);
+            assertPart.NotExceedTotalMinutes(2);
         }
         [Test]
         public void NotExceedMinutes_When_Called_Given_That_Result_Minutes_Are_More_That_Provided_Max_Does_Not_Throw()
@@ -127,7 +127,7 @@ namespace RunTicks.UnitTests
             Assert.Catch<AssertionException>(() =>
             {
                 // Act
-                assertPart.NotExceedMinutes(1, "some description");
+                assertPart.NotExceedTotalMinutes(1, "some description");
             });
         }
 
@@ -140,8 +140,8 @@ namespace RunTicks.UnitTests
             AssertPart assertPart = new AssertPart(measureResult);
 
             // Act
-            assertPart.NotExceedTime(new TimeSpan(0, 3, 0));
-            assertPart.NotExceedTime(new TimeSpan(0, 2, 0));
+            assertPart.NotExceedTotalTime(new TimeSpan(0, 3, 0));
+            assertPart.NotExceedTotalTime(new TimeSpan(0, 2, 0));
         }
         [Test]
         public void NotExceedTime_When_Called_Given_That_Result_Time_Are_More_That_Provided_Max_Does_Not_Throw()
@@ -154,7 +154,7 @@ namespace RunTicks.UnitTests
             Assert.Catch<AssertionException>(() =>
             {
                 // Act
-                assertPart.NotExceedTime(new TimeSpan(0, 1, 0), "some description");
+                assertPart.NotExceedTotalTime(new TimeSpan(0, 1, 0), "some description");
             });
         }
 

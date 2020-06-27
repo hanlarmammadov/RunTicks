@@ -555,7 +555,7 @@ namespace RunTicks.UnitTests
             var result = measurement.Run(timesOfRun);
 
             // Assert
-            Assert.AreEqual(stopWatchAccumulatedTicks, result.ElapsedTicks);
+            Assert.AreEqual(stopWatchAccumulatedTicks, result.TotalElapsedTicks);
         }
         [Test]
         public void Run_When_Called_Accumulates_Stop_Watch_Values_To_Create_A_Result_Value2()
@@ -576,7 +576,7 @@ namespace RunTicks.UnitTests
             var result = measurement.Run(timesOfRun);
 
             // Assert
-            Assert.AreEqual(stopWatchAccumulatedTicks, result.ElapsedTicks);
+            Assert.AreEqual(stopWatchAccumulatedTicks, result.TotalElapsedTicks);
         }
         [Test]
         public void Run_When_Called_With_Canceled_Token_Throws_OperationCanceledException()

@@ -19,7 +19,7 @@ namespace RunTicks.UnitTests
             string descr = "some description";
 
             // Act
-            NotExceedTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, descr);
+            NotExceedTotalTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedTotalTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, descr);
 
             // Assert
             Assert.AreEqual(expectedTimeSpan, notExceedsTimeAssertionMessage.ExpectedMaxTimespan);
@@ -34,7 +34,7 @@ namespace RunTicks.UnitTests
             TimeSpan expectedTimeSpan = new TimeSpan(5567);
             TimeSpan actualTimeSpan = new TimeSpan(674567);
             string descr = "some description";
-            NotExceedTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, descr);
+            NotExceedTotalTimeAssertionMessage notExceedsTimeAssertionMessage = new NotExceedTotalTimeAssertionMessage(expectedTimeSpan, actualTimeSpan, descr);
             StringBuilder sb = new StringBuilder();
 
             // Act

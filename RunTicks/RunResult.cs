@@ -34,10 +34,10 @@ namespace RunTicks
         public TimeSpan ElapsedTime => _elapsedTime; 
         public long NumberOfRuns => _numberOfRuns;
         // Total values.
-        public Int64 ElapsedTicks => _elapsedTime.Ticks; 
-        public Double Milliseconds => _elapsedTime.TotalMilliseconds;
-        public Double Seconds => _elapsedTime.TotalSeconds;
-        public Double Minutes => _elapsedTime.TotalMinutes;
+        public Int64 TotalElapsedTicks => _elapsedTime.Ticks; 
+        public Double TotalMilliseconds => _elapsedTime.TotalMilliseconds;
+        public Double TotalSeconds => _elapsedTime.TotalSeconds;
+        public Double TotalMinutes => _elapsedTime.TotalMinutes;
         // Average values.
         public Double AverageTicks => ((Double)_elapsedTime.Ticks) / _numberOfRuns;
         public Double AverageMilliseconds => ((Double)_elapsedTime.TotalMilliseconds) / _numberOfRuns;
