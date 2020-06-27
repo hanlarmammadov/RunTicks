@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace RunTicks
 {
     /// <summary>
-    /// Represents the measured metrics as a result of a conducted measurement.
+    /// Represents the measured metrics as a result of conducted measurement.
     /// </summary>
     public class RunResult
     {
@@ -26,7 +26,7 @@ namespace RunTicks
         /// <param name="endDate">End date of the measurement.</param>
         /// <param name="measurementName">Name of the measurement.</param>
         /// <param name="attemptName">Name of the current attempt.</param>
-        /// <param name="additionalData">Optional user provided data related to the measurement.</param>
+        /// <param name="additionalData">Optional user data related to this measurement.</param>
         internal RunResult(Int64 elapsedTicks,
                            Int64 numberOfRuns,
                            DateTime startDate,
@@ -70,10 +70,11 @@ namespace RunTicks
         /// Total minutes elapsed for this attempt of the measurement.
         /// </summary>
         public Double TotalMinutes => _elapsedTime.TotalMinutes;
-         
+
         /// <summary>
         /// Average ticks elapsed for a single action run.
         /// Averages are counted as totals divides number of runs.
+        /// 1 millisecond = 10 000 ticks.
         /// </summary>
         public Double AverageTicks => ((Double)_elapsedTime.Ticks) / _numberOfRuns;
         /// <summary>
