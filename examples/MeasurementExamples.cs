@@ -55,27 +55,28 @@ namespace Examples
         public void ExampleWithPreAndPostActions()
         {
             // Create the measurement.
-            Measurement measurement = Measurement.Create("My measurement 1")
-                                                 .OfAction(() =>
-                                                 {
-                                                     TestHelpers.SomeAction();
-                                                 })
-                                                 .WithPreAction(() =>
-                                                 {
-                                                     // This will be called BEFORE EACH call of 
-                                                     // the measured action. Of course, the execution time 
-                                                     // of this function is not considered.
+            Measurement measurement = Measurement
+                    .Create("My measurement 1")
+                    .OfAction(() =>
+                    {
+                        TestHelpers.SomeAction();
+                    })
+                    .WithPreAction(() =>
+                    {
+                        // This will be called BEFORE EACH call of 
+                        // the measured action. Of course, the execution time 
+                        // of this function is not considered.
 
-                                                     TestHelpers.SomeInitialization();
-                                                 })
-                                                 .WithPostAction(() =>
-                                                 {
-                                                     // This will be called AFTER EACH call of 
-                                                     // the measured action. Of course, the execution time 
-                                                     // of this function is not considered.
+                        TestHelpers.SomeInitialization();
+                    })
+                    .WithPostAction(() =>
+                    {
+                        // This will be called AFTER EACH call of 
+                        // the measured action. Of course, the execution time 
+                        // of this function is not considered.
 
-                                                     TestHelpers.SomeCleanUp();
-                                                 });
+                        TestHelpers.SomeCleanUp();
+                    });
 
             // Conduct the measurement by running 
             // the action specified number of times.
