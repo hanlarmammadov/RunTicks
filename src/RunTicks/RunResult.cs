@@ -73,23 +73,23 @@ namespace RunTicks
 
         /// <summary>
         /// Average ticks elapsed for a single action run.
-        /// Averages are counted as totals divides number of runs.
+        /// Averages are counted as totals divide number of runs.
         /// 1 millisecond = 10 000 ticks.
         /// </summary>
         public Double AverageTicks => ((Double)_elapsedTime.Ticks) / _numberOfRuns;
         /// <summary>
         /// Average milliseconds elapsed for a single action run.
-        /// Averages are counted as totals divides number of runs.
+        /// Averages are counted as totals divide number of runs.
         /// </summary>
         public Double AverageMilliseconds => ((Double)_elapsedTime.TotalMilliseconds) / _numberOfRuns;
         /// <summary>
         /// Average seconds elapsed for a single action run.
-        /// Averages are counted as totals divides number of runs.
+        /// Averages are counted as totals divide number of runs.
         /// </summary>
         public Double AverageSeconds => ((Double)_elapsedTime.TotalSeconds) / _numberOfRuns;
         /// <summary>
         /// Average minutes elapsed for a single action run.
-        /// Averages are counted as totals divides number of runs.
+        /// Averages are counted as totals divide number of runs.
         /// </summary>
         public Double AverageMinutes => ((Double)_elapsedTime.TotalMinutes) / _numberOfRuns;
 
