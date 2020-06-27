@@ -3,14 +3,14 @@
 	<PropertyGroup>
 		<TargetFramework>netstandard1.0</TargetFramework>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>0.2.0</Version>
+		<Version>0.2.1</Version>
 		<Authors>Khanlar Mammadov</Authors>
 		<PackageLicenseFile></PackageLicenseFile>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<Description>RunTicks is a simple library for performance testing of code.</Description>
 		<PackageProjectUrl>https://github.com/khanlarmammadov/RunTicks</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/khanlarmammadov/RunTicks</RepositoryUrl>
-		<PackageTags>performance testing;performance metrics;performance;code performance;testing;testing tools;</PackageTags>
+		<PackageTags>performance testing,performance metrics,performance,code performance,testing,testing tools</PackageTags>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
