@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace RunTicks
 {
     /// <summary>
-    /// Represents the result of a conducted measurement.
+    /// Represents the measured metrics as a result of a conducted measurement.
     /// </summary>
     public class RunResult
     {

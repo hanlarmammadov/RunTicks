@@ -5,6 +5,9 @@ using System.Threading;
 
 namespace RunTicks
 {
+    /// <summary>
+    /// Contains various assertions for measurement result.
+    /// </summary>
     public class AssertPart
     {
         private readonly RunResult _result;
