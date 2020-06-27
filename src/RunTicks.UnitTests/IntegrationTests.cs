@@ -22,7 +22,7 @@ namespace RunTicks.UnitTests
                 result.Should.NotExceedAverageTicks(9_000);
             });
 
-            result.Should.NotExceedAverageTicks(20_000);
+            result.Should.NotExceedAverageTicks(25_000);
         }
 
         [Test]

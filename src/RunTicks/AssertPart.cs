@@ -1,13 +1,14 @@
 ﻿using RunTicks.AssertionMessages;
 using System;
+using System.ComponentModel;
 using System.Globalization;
-using System.Threading;
 
 namespace RunTicks
 {
     /// <summary>
     /// Contains various assertions for measurement result.
     /// </summary>
+    [EditorBrowsable(EditorBrowsableState.Never)]
     public class AssertPart
     {
         private readonly RunResult _result;

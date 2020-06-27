@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RunTicks.AssertionMessages
 {
-    public class NotExceedTotalSecondsAssertionMessage : AssertionMessageBase
+    internal class NotExceedTotalSecondsAssertionMessage : AssertionMessageBase
     {
         private readonly Int64 _expectedMaxSeconds;
         private readonly Double _actualSeconds;

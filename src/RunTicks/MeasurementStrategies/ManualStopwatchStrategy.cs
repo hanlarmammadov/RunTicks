@@ -3,22 +3,22 @@ using System.Diagnostics;
 
 namespace RunTicks.MeasurementStrategies
 {
-    public class AsyncManualStopwatchStrategy : IMeasurementStrategy
+    internal class ManualStopwatchStrategy : IMeasurementStrategy
     {
-        private readonly AsyncActionWithStopwatch _action;
+        private readonly Action<Stopwatch> _action;
 
-        public AsyncManualStopwatchStrategy(AsyncActionWithStopwatch action)
+        public ManualStopwatchStrategy(Action<Stopwatch> action)
         {
             _action = action;
         }
 
-        internal AsyncActionWithStopwatch Action => _action;
+        internal Action<Stopwatch> Action => _action;
 
         public void ExecuteAction(Stopwatch stopwatch)
         {
             try
             {
-                _action(stopwatch).Wait();
+                _action(stopwatch);
             }
             finally
             {
