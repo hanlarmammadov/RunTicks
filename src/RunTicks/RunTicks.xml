@@ -4,6 +4,11 @@
         <name>RunTicks</name>
     </assembly>
     <members>
+        <member name="T:RunTicks.AssertionException">
+            <summary>
+            An exception that is thrown when the measurement assertion fails.
+            </summary>
+        </member>
         <member name="T:RunTicks.AssertPart">
             <summary>
             Contains various assertions for measurement result.
@@ -16,48 +21,48 @@
         </member>
         <member name="M:RunTicks.Measurement.Create(System.String)">
             <summary>
-            Starting point for building a measurement using builder methods.
+            Starting point for creating a measurement using builder methods.
             </summary>
             <param name="name">Measurement name.</param>
             <returns>Created measurement.</returns>
         </member>
         <member name="M:RunTicks.Measurement.Create">
             <summary>
-            Starting point for building a measurement using builder methods.
+            Starting point for creating a measurement using builder methods.
             </summary>
             <returns>Created measurement.</returns>
         </member>
         <member name="M:RunTicks.Measurement.OfAction(System.Action)">
             <summary>
-            Adds a parameterless action that is being measured.
+            Adds a parameterless action to be measured.
             </summary>
             <param name="action"></param>
             <returns>Self.</returns>
         </member>
         <member name="M:RunTicks.Measurement.OfAction(System.Action{System.Diagnostics.Stopwatch})">
             <summary>
-            Adds a measured action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
+            Adds an action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
             </summary>
             <param name="action"></param>
             <returns>Self.</returns>
         </member>
         <member name="M:RunTicks.Measurement.OfAsyncAction(RunTicks.AsyncAction)">
             <summary>
-            Adds a measured async parameterless action that is being measured.
+            Adds an async parameterless action to be measured.
             </summary>
             <param name="action"></param>
             <returns>Self.</returns>
         </member>
         <member name="M:RunTicks.Measurement.OfAsyncAction(RunTicks.AsyncActionWithStopwatch)">
             <summary>
-            Adds a measured async action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
+            Adds an async action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
             </summary>
             <param name="action"></param>
             <returns>Self.</returns>
         </member>
         <member name="M:RunTicks.Measurement.WithPreAction(System.Action)">
             <summary>
-            Specifies a pre-action that is executed before every iteration of execution of the measured action.
+            Specifies a pre-action that is executed before every execution iteration of the measured action.
             The execution time of pre-action is never considered.
             </summary>
             <param name="preAction"></param>
@@ -65,7 +70,7 @@
         </member>
         <member name="M:RunTicks.Measurement.WithPostAction(System.Action)">
             <summary>
-            Specifies a post-action that is executed after every iteration of execution of the measured action.
+            Specifies a post-action that is executed after every execution iteration of the measured action.
             The execution time of post-action is never considered.
             </summary>
             <param name="postAction"></param>
@@ -107,7 +112,7 @@
         </member>
         <member name="T:RunTicks.RunResult">
             <summary>
-            Represents the measured metrics as a result of a conducted measurement.
+            Represents the measured metrics as a result of conducted measurement.
             </summary>
         </member>
         <member name="M:RunTicks.RunResult.#ctor(System.Int64,System.Int64,System.DateTime,System.DateTime,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
@@ -120,7 +125,7 @@
             <param name="endDate">End date of the measurement.</param>
             <param name="measurementName">Name of the measurement.</param>
             <param name="attemptName">Name of the current attempt.</param>
-            <param name="additionalData">Optional user provided data related to the measurement.</param>
+            <param name="additionalData">Optional user data related to this measurement.</param>
         </member>
         <member name="P:RunTicks.RunResult.NumberOfRuns">
             <summary>
@@ -157,6 +162,7 @@
             <summary>
             Average ticks elapsed for a single action run.
             Averages are counted as totals divide number of runs.
+            1 millisecond = 10 000 ticks.
             </summary>
         </member>
         <member name="P:RunTicks.RunResult.AverageMilliseconds">
