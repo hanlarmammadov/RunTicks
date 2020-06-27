@@ -156,25 +156,25 @@
         <member name="P:RunTicks.RunResult.AverageTicks">
             <summary>
             Average ticks elapsed for a single action run.
-            Averages are counted as totals divides number of runs.
+            Averages are counted as totals divide number of runs.
             </summary>
         </member>
         <member name="P:RunTicks.RunResult.AverageMilliseconds">
             <summary>
             Average milliseconds elapsed for a single action run.
-            Averages are counted as totals divides number of runs.
+            Averages are counted as totals divide number of runs.
             </summary>
         </member>
         <member name="P:RunTicks.RunResult.AverageSeconds">
             <summary>
             Average seconds elapsed for a single action run.
-            Averages are counted as totals divides number of runs.
+            Averages are counted as totals divide number of runs.
             </summary>
         </member>
         <member name="P:RunTicks.RunResult.AverageMinutes">
             <summary>
             Average minutes elapsed for a single action run.
-            Averages are counted as totals divides number of runs.
+            Averages are counted as totals divide number of runs.
             </summary>
         </member>
         <member name="P:RunTicks.RunResult.MeasurementName">

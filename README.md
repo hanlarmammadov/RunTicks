@@ -33,9 +33,37 @@ LogTheMeasurement(result);
 result.Should.NotExceedAverageMilliseconds(100);
 ```
 
+## Description
+
+The instance of `RunTicks.RunResult` - which is a result of measurement contains the following metrics and data:
+
+
+| Metrics               | Type       | Description                               |
+|-----------------------|------------|-------------------------------------------|
+| NumberOfRuns          | Int64      | Number of runs of the measuring action method. |
+| ElapsedTime           | TimeSpan   | Total time elapsed for this attempt of the measurement. |
+| TotalElapsedTicks     | Int64      | Total ticks elapsed for this attempt of the measurement. |
+| TotalMilliseconds     | Double     | Total milliseconds elapsed for this attempt of the measurement. |
+| TotalSeconds          | Double     | Total seconds elapsed for this attempt of the measurement. |
+| TotalMinutes          | Double     | Total minutes elapsed for this attempt of the measurement. |
+| AverageTicks          | Double     | Average ticks elapsed for a single action run. |
+| AverageMilliseconds   | Double     | Average milliseconds elapsed for a single action run. |
+| AverageSeconds        | Double     | Average seconds elapsed for a single action run. |
+| AverageMinutes        | Double     | Average minutes elapsed for a single action run. |
+| MeasurementName       | String     | Name of the measurement. |
+| AttemptName           | String     | Name of the current attempt. |
+| StartDate             | DateTime   | Start date of the measurement. |
+| EndDate               | DateTime   | End date of the measurement. |
+| AdditionalData        | Dictionary<String, Object>   | Optional user provided data related to the measurement. |
+
+*Average metrics are counted as totals divide number of runs.   
+*1 millisecond = 10 000 ticks.   
+
 ## More Examples
 
 ### Example with Manual Stopwatch
+
+Despite very convenient, using parameterless wrapper action has a flaw - the time costs of calling this wrapper function are added to the resulting time metrics. If your measurements are quite sensitive to be affected from these costs, you can use the overload of `OfAction` method which allows you to manipulate (start and stop) the stopwatch manually. This overload takes an action delegate taking an instance of `System.Diagnostics.StopWatch` as a parameter:
 
 ```cs
 // Create the measurement.
@@ -58,6 +86,8 @@ result.Should.NotExceedAverageTicks(300_000);
 
 ### Example with pre- and post- actions
 
+Sometimes you need some steps that should be taken before and after each run of the measured code. For this you can specify pre- and post- actions which will be executed prior and after of each run of the main (measured) action. Needless to say that execution times of these actions do not affect the measured metrics.
+ 
 ```cs
 // Create the measurement.
 Measurement measurement = Measurement
