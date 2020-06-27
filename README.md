@@ -1,6 +1,6 @@
 # RunTicks
 
-> Simple library for execution time measurements.
+> Simple library for performance testing of code.
  
 Dependencies:  
 * .Net Standard >= 1.0
@@ -83,6 +83,7 @@ RunResult result = measurement.Run(200);
 // Make your assertions.
 result.Should.NotExceedAverageTicks(300_000);
 ```
+---
 
 ### Example with pre- and post- actions
 
@@ -120,6 +121,7 @@ RunResult result = measurement.Run(200);
 // Make your assertions.
 result.Should.NotExceedAverageTicks(500_000);
 ```
+---
 
 ### Example with Async Action
 
@@ -138,6 +140,7 @@ RunResult result = measurement.Run(50);
 // Make your assertions.
 result.Should.NotExceedAverageTicks(300_000);
 ```
+---
 
 ### Example with Async Action and Manual Stopwatch
 
@@ -158,6 +161,7 @@ RunResult result = measurement.Run(50);
 // Make your assertions.
 result.Should.NotExceedAverageTicks(300_000);
 ```
+---
 
 ### Example with Adding Custom Data to the Measurement
 
