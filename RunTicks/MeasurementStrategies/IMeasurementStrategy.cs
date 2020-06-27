@@ -2,7 +2,7 @@
 
 namespace RunTicks.MeasurementStrategies
 {
-    public interface IMeasurementStrategy
+    internal interface IMeasurementStrategy
     {
         void ExecuteAction(Stopwatch stopwatch);
     }

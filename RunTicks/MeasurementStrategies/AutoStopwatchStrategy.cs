@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace RunTicks.MeasurementStrategies
 {
-    public class AutoStopwatchStrategy : IMeasurementStrategy
+    internal class AutoStopwatchStrategy : IMeasurementStrategy
     {
         private readonly Action _action;
 

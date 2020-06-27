@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RunTicks.AssertionMessages
 {
-    public class NotExceedAverageMinutesAssertionMessage : AssertionMessageBase
+    internal class NotExceedAverageMinutesAssertionMessage : AssertionMessageBase
     {
         private readonly Int64 _expectedMaxAverageMinutes;
         private readonly Double _actualAverageMinutes;

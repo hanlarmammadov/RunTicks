@@ -3,7 +3,7 @@ using System.Text;
 
 namespace RunTicks.AssertionMessages
 {
-    public abstract class AssertionMessageBase
+    internal abstract class AssertionMessageBase
     {
         protected readonly string _description;
 

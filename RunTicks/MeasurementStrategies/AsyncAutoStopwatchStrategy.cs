@@ -2,7 +2,7 @@
 
 namespace RunTicks.MeasurementStrategies
 {
-    public class AsyncAutoStopwatchStrategy : IMeasurementStrategy
+    internal class AsyncAutoStopwatchStrategy : IMeasurementStrategy
     {
         private readonly AsyncAction _action;
 

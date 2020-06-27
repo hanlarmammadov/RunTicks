@@ -23,8 +23,8 @@ namespace RunTicks
         }
 
         public string Name => _measurementName;
-        public IMeasurementStrategy MeasurementStrategy => _measurementStrategy;
-        public Dictionary<string, object> AdditionalData => _additionalData;
+        public Dictionary<string, object> AdditionalData => _additionalData; 
+        internal IMeasurementStrategy MeasurementStrategy => _measurementStrategy;
         internal Action PreAction => _preAction;
         internal Action PostAction => _postAction;
 
