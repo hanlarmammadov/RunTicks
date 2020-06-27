@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RunTicks</name>
+    </assembly>
+    <members>
+        <member name="T:RunTicks.AssertPart">
+            <summary>
+            Contains various assertions for measurement result.
+            </summary>
+        </member>
+        <member name="T:RunTicks.Measurement">
+            <summary>
+            Main class which is a starting point for creating and running the measurements. 
+            </summary>
+        </member>
+        <member name="M:RunTicks.Measurement.Create(System.String)">
+            <summary>
+            Starting point for building a measurement using builder methods.
+            </summary>
+            <param name="name">Measurement name.</param>
+            <returns>Created measurement.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.Create">
+            <summary>
+            Starting point for building a measurement using builder methods.
+            </summary>
+            <returns>Created measurement.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.OfAction(System.Action)">
+            <summary>
+            Adds a parameterless action that is being measured.
+            </summary>
+            <param name="action"></param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.OfAction(System.Action{System.Diagnostics.Stopwatch})">
+            <summary>
+            Adds a measured action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
+            </summary>
+            <param name="action"></param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.OfAsyncAction(RunTicks.AsyncAction)">
+            <summary>
+            Adds a measured async parameterless action that is being measured.
+            </summary>
+            <param name="action"></param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.OfAsyncAction(RunTicks.AsyncActionWithStopwatch)">
+            <summary>
+            Adds a measured async action taking an instance of <c>System.Diagnostics.Stopwatch</c>.
+            </summary>
+            <param name="action"></param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.WithPreAction(System.Action)">
+            <summary>
+            Specifies a pre-action that is executed before every iteration of execution of the measured action.
+            The execution time of pre-action is never considered.
+            </summary>
+            <param name="preAction"></param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.WithPostAction(System.Action)">
+            <summary>
+            Specifies a post-action that is executed after every iteration of execution of the measured action.
+            The execution time of post-action is never considered.
+            </summary>
+            <param name="postAction"></param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.WithData(System.String,System.Object)">
+            <summary>
+            Specifies some custom data that will be added to the result of this measurement.
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <returns>Self.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.Run(System.Int64,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Performs the time measurement.
+            </summary>
+            <param name="numberOfTimes">Specifies the number of times the measured action should be called during the measurement.</param>
+            <param name="attemptName">Name of the current attempt.</param>
+            <param name="cancellationToken">Cancellation token.</param>
+            <returns>Result of the measurement containing the measured metrics.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.Run(System.Int64,System.String,System.Int32)">
+            <summary>
+            Performs the time measurement.
+            </summary>
+            <param name="numberOfTimes">Specifies the number of times the measured action should be called during the measurement.</param>
+            <param name="attemptName">Name of the current attempt.</param>
+            <param name="timeout">Specifies the timeout in milliseconds after which the measurement terminates with a <c>System.OperationCanceledException</c> exception.</param>
+            <returns>Result of the measurement containing the measured metrics.</returns>
+        </member>
+        <member name="M:RunTicks.Measurement.Run(System.Int64,System.Int32)">
+            <summary>
+            Performs the time measurement.
+            </summary>
+            <param name="numberOfTimes">Specifies the number of times the measured action should be called during the measurement.</param>
+            <param name="timeout">Specifies the timeout in milliseconds after which the measurement terminates with a <c>System.OperationCanceledException</c> exception.</param>
+            <returns>Result of the measurement containing the measured metrics.</returns>
+        </member>
+        <member name="T:RunTicks.RunResult">
+            <summary>
+            Represents the measured metrics as a result of a conducted measurement.
+            </summary>
+        </member>
+        <member name="M:RunTicks.RunResult.#ctor(System.Int64,System.Int64,System.DateTime,System.DateTime,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates an instance of <c>RunTicks.RunResult</c> using the provided parameters.
+            </summary>
+            <param name="elapsedTicks">Total ticks elapsed for this attempt of the measurement.</param>
+            <param name="numberOfRuns">Number of runs of measuring action method.</param>
+            <param name="startDate">Start date of the measurement.</param>
+            <param name="endDate">End date of the measurement.</param>
+            <param name="measurementName">Name of the measurement.</param>
+            <param name="attemptName">Name of the current attempt.</param>
+            <param name="additionalData">Optional user provided data related to the measurement.</param>
+        </member>
+        <member name="P:RunTicks.RunResult.NumberOfRuns">
+            <summary>
+            Number of runs of measuring action method.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.ElapsedTime">
+            <summary>
+            Total time elapsed for this attempt of the measurement.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.TotalElapsedTicks">
+            <summary>
+            Total ticks elapsed for this attempt of the measurement.
+            1 millisecond = 10 000 ticks.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.TotalMilliseconds">
+            <summary>
+            Total milliseconds elapsed for this attempt of the measurement.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.TotalSeconds">
+            <summary>
+            Total seconds elapsed for this attempt of the measurement.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.TotalMinutes">
+            <summary>
+            Total minutes elapsed for this attempt of the measurement.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.AverageTicks">
+            <summary>
+            Average ticks elapsed for a single action run.
+            Averages are counted as totals divides number of runs.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.AverageMilliseconds">
+            <summary>
+            Average milliseconds elapsed for a single action run.
+            Averages are counted as totals divides number of runs.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.AverageSeconds">
+            <summary>
+            Average seconds elapsed for a single action run.
+            Averages are counted as totals divides number of runs.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.AverageMinutes">
+            <summary>
+            Average minutes elapsed for a single action run.
+            Averages are counted as totals divides number of runs.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.MeasurementName">
+            <summary>
+            Name of the measurement.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.AttemptName">
+            <summary>
+            Name of the current attempt.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.StartDate">
+            <summary>
+            Start date of the measurement.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.EndDate">
+            <summary>
+            End date of the measurement.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.AdditionalData">
+            <summary>
+            Optional user provided data related to the measurement.
+            </summary>
+        </member>
+        <member name="P:RunTicks.RunResult.Should">
+            <summary>
+            Test assertions for this measurement result.
+            </summary>
+        </member>
+    </members>
+</doc>
